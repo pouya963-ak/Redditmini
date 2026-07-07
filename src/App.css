@@ -3,9 +3,13 @@ main {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 }
 
 * {
-  background-color: blanchedalmond;
+background-color: #191c21;
+}
+
+h1 {
+  color: #ff4500;
 }
