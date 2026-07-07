@@ -1,6 +1,6 @@
 const BASE_URL = 'https://www.reddit.com'
 
-export async function (getPostsBySubreddit = 'popular') {
+export async function getPostsBySubreddit(subreddit = 'popular') {
     const response = await fetch(`${BASE_URL}/t/${subreddit}.json`);
 
     if (!response.ok) {
