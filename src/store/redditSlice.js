@@ -1,30 +1,14 @@
-// import { createAsyncThunk, createSlice } from '@reduxjs/toolkit ';
-// import {
-//     getPostBySubreddit,
-//     searchPosts,
-//     getPostbyId,
-//     getPostsBySubreddit
-// } from '../api/redditApi';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { getPostsBySubreddit } from '../api/redditApi';
 
-// export const fetchPostsBySubreddit = createAsyncThunk(
-//     'reddit/fetchPostsBySubreddit',
-//     async (subreddit) => {
-//         const posts = await getPostsBySubreddit(subreddit);
-//         return posts;
-//     }
-// );
+export const fetchPostsBySubreddit = createAsyncThunk(
+    'reddit/fetchPostsBySubreddit',
+    async (subreddit) => {
+        const posts = await getPostsBySubreddit(subreddit);
+        return posts;
+    }
+)
 
-// export const fetchPostsBySearchTerm = createAsyncThunk(
-//     'reddit/fetchPostsBySearchTerm',
-//     async (searchterm) => {
-//         const posts = await searchPosts(searchterm);
-//         return posts;
-//     }
-// );
-
-
-
-import { createSlice } from '@reduxjs/toolkit';
 
 const redditSlice = createSlice({
     name: 'reddit',
@@ -35,6 +19,23 @@ const redditSlice = createSlice({
         ErrorMessage: '',
     },
     reducers: {},
+    extraReducers: (builder) => {
+      builder
+        .addCase(fetchPostsBySubreddit.pending, (state) => {
+          state.isloading = true;
+          state.hasError = false;
+          state.ErrorMessage = '';
+        })
+        .addCase(fetchPostsBySubreddit.fulfilled, (state, action) => {
+            state.isloading = false;
+            state.posts = action.payload;
+        })
+        .addCase(fetchPostsBySubreddit.rejected, (state, action) => {
+            state.isloading = false;
+            state.hasError = true;
+            state.ErrorMessage = action.error.message;
+        });
+    },
 });
 
 export default redditSlice.reducer;
