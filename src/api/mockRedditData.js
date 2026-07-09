@@ -25,6 +25,8 @@ export const mockPosts = [
 
     post_hint: 'image',
 
+
+
   },
 
   {
