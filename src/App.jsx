@@ -4,8 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostsBySubreddit } from './store/redditSlice';
 import './App.css';
 
-import Header from '/Users/pouya/Documents/Career/Projects3/Redditmini/src/features/Header/Header.jsx'
-
+import Header from './features/Header/Header.jsx'
 function App() {
   const dispatch = useDispatch();
 
