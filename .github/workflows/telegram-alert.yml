@@ -1,0 +1,22 @@
+name: Telegram Project Alert
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send Telegram message
+        run: |
+          curl -s -X POST "https://api.telegram.org/bot${{ secrets.8659461933:AAEH1eEd5L9h_oQJOGpACF2HcbnZeaFlGO8 }}/sendMessage" \
+          -d "chat_id=${{ secrets.-4994285201 }}" \
+          -d "text=🚀 New update pushed!
+
+Repository: ${{ github.repository }}
+Branch: ${{ github.ref_name }}
+Commit: ${{ github.event.head_commit.message }}
+By: ${{ github.actor }}"

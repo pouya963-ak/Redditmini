@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    background-color: #dedede14;
+    border-bottom: 3px solid #edeff1b5;
+    border-radius: 38px;
+}
+
+.header__logo {
+    color: #ff4500;
+    margin: 0;
+    font-size: 1.8rem;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
