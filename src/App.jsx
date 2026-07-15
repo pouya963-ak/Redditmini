@@ -3,8 +3,9 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostsBySubreddit } from './store/redditSlice';
 import './App.css';
+import Header from './features/Header/Header.jsx';
+import PostCard from './features/Post/postCard.jsx';
 
-import Header from './features/Header/Header.jsx'
 function App() {
   const dispatch = useDispatch();
 
@@ -28,13 +29,18 @@ function App() {
       <main>
         <p>Redux fetch successful</p>
         <p> Fethced posts: {posts.length} </p>
-        <ul>
+        {/* <ul>
           {posts.slice(0, 5).map((post) => (
             <li key={post.id}>
               r/{post.subreddit} - {post.title}
             </li>
           ))}
-        </ul>
+        </ul> */}
+        <section>
+          {posts.map((post) => (
+            <PostCard key={post.id} post={post} />
+          ))}
+        </section>
       </main>
     </div>
   );
