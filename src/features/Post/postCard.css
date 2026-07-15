@@ -16,9 +16,10 @@
 }
 
 .post-card__image {
-
+    display: block;
     width: 60%;
     max-height: 480px;
+    object-fit: cover;
     margin: 0 auto;
     border-radius: 1.4rem;
     margin-bottom: 30px;
