@@ -1,5 +1,5 @@
 
-import './PostCard.css';
+import './postCard.css';
 
 function PostCard({ post }) {
     const hasImage = post.post_hint === 'image';

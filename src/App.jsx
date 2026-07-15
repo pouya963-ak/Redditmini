@@ -29,13 +29,6 @@ function App() {
       <main>
         <p>Redux fetch successful</p>
         <p> Fethced posts: {posts.length} </p>
-        {/* <ul>
-          {posts.slice(0, 5).map((post) => (
-            <li key={post.id}>
-              r/{post.subreddit} - {post.title}
-            </li>
-          ))}
-        </ul> */}
         <section>
           {posts.map((post) => (
             <PostCard key={post.id} post={post} />
