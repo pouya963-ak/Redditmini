@@ -29,7 +29,7 @@ function App() {
       <main>
         <p>Redux fetch successful</p>
         <p> Fethced posts: {posts.length} </p>
-        <section>
+        <section className='haji'>
           {posts.map((post) => (
             <PostCard key={post.id} post={post} />
           ))}
