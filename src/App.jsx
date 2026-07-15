@@ -27,8 +27,9 @@ function App() {
       <Header />
 
       <main>
-        <p>Redux fetch successful</p>
-        <p> Fethced posts: {posts.length} </p>
+        <h2 className='welcome_header'>
+          Wellcome to your Hub 
+        </h2>
         <section className='haji'>
           {posts.map((post) => (
             <PostCard key={post.id} post={post} />

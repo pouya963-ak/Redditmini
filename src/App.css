@@ -16,3 +16,9 @@ p {
 li {
   margin: 30px;
 }
+
+.welcome_header {
+  text-align: center;
+  opacity: 85%;
+  margin: 50px;
+}
