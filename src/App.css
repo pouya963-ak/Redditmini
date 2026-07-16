@@ -1,10 +1,11 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
+  opacity: 98%;
 }
 
 body {
   background-color: rgb(0, 3, 21, 0.99);
-  color: aliceblue;
+  color: rgba(240, 248, 255, 0.917);
 
 }
 
