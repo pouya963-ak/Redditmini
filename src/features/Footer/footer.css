@@ -3,4 +3,11 @@
     border-top: 2px solid rgb(170, 170, 170) ;
     border-radius: 1.5rem;
     margin-top: 2.5rem;
+    /* opacity: 85%; */
+
 }
+
+.Footer-text {
+    padding-bottom: 20px;
+}
+

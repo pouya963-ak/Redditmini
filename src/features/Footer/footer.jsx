@@ -3,7 +3,7 @@ import './footer.css';
 function Footer() {
     return (
         <div className='Footer'>
-            <h4>Developed By Akbari Bros Ltd.</h4>
+            <h4 className='Footer-text'>Developed By Akbari Bros Ltd.</h4>
         </div>
     )
 }
