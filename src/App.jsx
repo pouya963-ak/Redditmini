@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostsBySubreddit } from './store/redditSlice';
 import './App.css';
+
 import Header from './features/Header/Header.jsx';
 import PostCard from './features/Post/postCard.jsx';
 import Footer from './features/Footer/footer.jsx';
