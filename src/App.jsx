@@ -5,6 +5,8 @@ import { fetchPostsBySubreddit } from './store/redditSlice';
 import './App.css';
 import Header from './features/Header/Header.jsx';
 import PostCard from './features/Post/postCard.jsx';
+import Footer from './features/Footer/Footer.jsx'
+
 
 function App() {
   const dispatch = useDispatch();
@@ -36,6 +38,7 @@ function App() {
           ))}
         </section>
       </main>
+      <Footer />
     </div>
   );
 }
