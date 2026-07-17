@@ -1,5 +1,5 @@
 import Header from './features/Header/Header.jsx';
-import PostCard from './features/Post/postCard.jsx';
+import PostCard from './features/Post/PostCard.jsx';
 import Footer from './features/Footer/footer.jsx';
 import Home from './features/Home/Home.jsx';
 import './App.css';
