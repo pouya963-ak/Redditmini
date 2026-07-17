@@ -3,13 +3,6 @@ import './postCard.css';
 
 function PostCard({ post }) {
     const hasImage = post.post_hint === 'image';
-    // {post.selftext && (
-    //     <p classname="post-card__text">{post.selftext}</p>
-    // )}
-    // <div className='post-card__stats'>
-    //     <span>{post.ups} upvotes</span>
-    //     <span>{post.num_comments} comments</span>
-    // </div>
   return (
     <article className="post-card">
       <p>
