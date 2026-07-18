@@ -2,12 +2,14 @@ import Header from './features/Header/Header.jsx';
 import PostCard from './features/Post/PostCard.jsx';
 import Footer from './features/Footer/footer.jsx';
 import Home from './features/Home/Home.jsx';
+import Menu from './features/Menu/Menu.jsx';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
       <Header />
+      <Menu />
       <Home />
       <main>
         <h2 className='welcome_header'>
