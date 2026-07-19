@@ -1,5 +1,4 @@
 import Header from './features/Header/Header.jsx';
-import PostCard from './features/Post/PostCard.jsx';
 import Footer from './features/Footer/footer.jsx';
 import Home from './features/Home/Home.jsx';
 import Menu from './features/Menu/Menu.jsx';
@@ -9,13 +8,9 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Menu />
+      {/* <Menu /> */}
       <Home />
-      <main>
-        <h2 className='welcome_header'>
-          Wellcome to your Hub 
-        </h2>
-      </main>
+      <main />
       <Footer />
     </div>
   );

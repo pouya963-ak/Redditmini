@@ -1,10 +1,14 @@
 .home {
     margin: 0 auto;
+    margin-top: 170px;
+    position: relative;
 }
 
 h2 {
     text-align: center;
     color: #d3d3d3e0;
     margin: 2.5rem;
+    padding-bottom: 30px;
+    font-size: 30px;
 }
 
