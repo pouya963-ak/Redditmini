@@ -16,7 +16,7 @@ const redditSlice = createSlice({
         posts: [],
         isLoaded: false,
         hasError: false,
-        ErrorMessage: '',
+        errorMessage: '',
         selectedSubreddit: 'popular',
     },
     reducers: {
@@ -38,7 +38,7 @@ const redditSlice = createSlice({
         .addCase(fetchPostsBySubreddit.rejected, (state, action) => {
             state.isloading = false;
             state.hasError = true;
-            state.ErrorMessage = action.error.message;
+            state.errorMessage = action.error.message;
         });
     },
 });

@@ -1,28 +1,58 @@
+.menu__toggle {
+  position: fixed;
+  right: 4%;
+  font-size: 32px;
+  /* background-color: rgba(11, 19, 66, 0.99); */
+  color: white;
+  border-radius: 0.8rem;
+  top: 4%;
+  border: none;
+  width: 3rem;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(24px) saturate(100%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.18),
+    inset 0 1px 0 #08213ae6;
+
+
+
+
+}
+
 .menu {
   position: fixed;
-  right: 5%;
-  margin-top: 20px;
-  font-size: 15px;
-  border-radius: 22px;
-  border-left: 1px solid rgba(11, 13, 59, 0.746);
-  border-right: 1px solid rgba(11, 7, 70, 0.11);
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 55px;
-  height: 50px;
+  top: 15%;
+  right: 1%;
+  z-index: 100;
+}
 
+.menu__list {
+  list-style: none;
+  text-align: start;
 
+}
 
-  background: rgba(255, 255, 255, 0.005);
-    backdrop-filter: blur(24px) saturate(100%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    box-shadow:
-      0 8px 32px rgba(0,0,0,0.18),
-      inset 0 1px 0 rgba(255,255,255,0.35);
+.menu__list button {
+  /* background-color: rgba(11, 19, 66, 0.99); */
+  color: aliceblue;
+  border-radius: 6px;
+  border: none;
+  height: 2.2rem;
+  width: 4rem;
+
+  background: rgba(255, 255, 255, 0.11);
+  backdrop-filter: blur(24px) saturate(100%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.18),
+    inset 0 1px 0 #08213ae6;
 }
 
 @media (max-width: 768px) {
   .menu {
-    right: 3%;
+    right: 1%;
+    top: 30%;
   }
 }
