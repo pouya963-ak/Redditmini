@@ -8,10 +8,10 @@ import {
 
 
 const subreddits = [
-    { name: 'popular', value: 'popular' },
-    { name: 'Pictures', value: 'pics' },
-    { name: 'JavaScript', value: 'javascript' },
-    { name: 'React', value: 'reactJs' },
+    { name: 'popular', value: 'Popular' },
+    { name: 'politics', value: 'Politics' },
+    { name: 'tech', value: 'Tech' },
+    { name: 'sports', value: 'Sports' },
 ];
 
 function Menu() {
@@ -59,7 +59,7 @@ function Menu() {
                                 }
                                 onClick={() => handleSubredditClick(subreddit.vlaue)}
                                 >
-                                r/{subreddit.value}
+                                {subreddit.value}
                                 </button>
                             </li>
                         ))}
