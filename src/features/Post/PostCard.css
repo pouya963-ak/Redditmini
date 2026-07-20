@@ -35,8 +35,11 @@
 
 @media (max-width: 768px) {
     .post-card {
-        max-width: 55%;
-        max-height: 70%;
+        /* max-width: 55%;
+        max-height: 70%; */
+
+        width: calc(100% - 32px);
+        margin: 25px auto;
     }
     
 }

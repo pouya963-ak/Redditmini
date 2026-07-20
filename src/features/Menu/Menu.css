@@ -52,18 +52,26 @@
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   box-shadow:
     0 8px 32px rgba(0,0,0,0.18),
-    inset 0 1px 0 #08213ae6;
+    inset 0 1px 0 #20568ce6;
 }
 
 @media (max-width: 768px) {
   .menu {
-    right: 4%;
-    top: 30%;
-    /* max-width: 50px; */
+    top: 10px;
+    right: 1px;
+  }
+
+  .menu__panel {
+    position: fixed;
+    top: 110px;
+    right: 6px;
+    width: 120px;
+    max-width: calc(100vw - 32px);
+
   }
   .menu__list button {
     position: relative;
-    /* right: 25%; */
+    right: 45px;
   }
 
 
@@ -76,12 +84,12 @@
   z-index: 100;
 
 
-  background: rgba(17, 49, 188, 0.145);
+  background: rgba(14, 34, 119, 0.145);
   backdrop-filter: blur(24px) saturate(100%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
   box-shadow:
     0 8px 32px rgba(0,0,0,0.98),
-    inset 0 1px 0 rgba(8, 8, 12, 0.35);
+    inset 0 1px 0 rgba(228, 228, 241, 0.35);
 }
 
 
