@@ -25,7 +25,7 @@
 
 .post-card__image {
     display: block;
-    width: 65%;
+    width: 68%;
     max-height: 480px;
     object-fit: cover;
     margin: 0 auto;
@@ -33,14 +33,19 @@
     margin-bottom: 30px;
 }
 
+
 @media (max-width: 768px) {
     .post-card {
         /* max-width: 55%;
         max-height: 70%; */
         /* max-height: 10%; */
-        
+
         width: calc(100% - 32px);
         margin: 25px auto; 
+    }
+
+    .post-card__image {
+        width: 60%;
     }
     
 }

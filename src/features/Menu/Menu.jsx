@@ -7,15 +7,15 @@ import {
 } from '../../store/redditSlice';
 
 
-const subreddits = [
-    { name: 'popular', value: 'Popular' },
-    { name: 'pics', value: 'Pictures' },
-    { name: 'javascripts', value: 'Javascripts' },
-    { name: 'reactjs', value: 'reactJs' },
-];
 
 function Menu() {
     const dispatch = useDispatch();
+    const subreddits = [
+        { name: 'popular', value: 'Popular' },
+        { name: 'pics', value: 'Pictures' },
+        { name: 'javascript', value: 'Javascript' },
+        { name: 'reactjs', value: 'ReactJs' },
+    ];
     const selectedSubreddit = useSelector(
         (state) => state.reddit.selectedSubreddit
     );
@@ -49,17 +49,17 @@ function Menu() {
                     {/* <h2 className='menu__title'>Subreddits</h2> */}
                     <ul className='menu__list'>
                         {subreddits.map((subreddit) => (
-                            <li key={subreddit.value}>
+                            <li key={subreddit.name}>
                                 <button
                                 type='button'
                                 className={
-                                    selectedSubreddit === subreddit.value
+                                    selectedSubreddit === subreddit.name
                                         ? 'menu__item menu__item--active'
                                         : 'menu__item'
                                 }
-                                onClick={() => handleSubredditClick(subreddit.vlaue)}
+                                onClick={() => handleSubredditClick(subreddit.name)}
                                 >
-                                {subreddit.value}
+                                {subreddit.name}
                                 </button>
                             </li>
                         ))}
