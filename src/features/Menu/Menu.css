@@ -44,7 +44,7 @@
   font-weight: 900;
   position: relative;
   right: 20%;
-  background-color: #041436f1;
+  background-color: #041436;
 
 
   /* background: rgba(255, 255, 255, 0.14);
@@ -83,7 +83,7 @@
   border-radius: 30px;
   z-index: 100;
 
-  background: rgba(5, 10, 35, 0.996);
+  background: rgba(4, 9, 31, 0.996);
   backdrop-filter: blur(768px) saturate(150%);
   -webkit-backdrop-filter: blur(200px) saturate(180%);
   box-shadow:

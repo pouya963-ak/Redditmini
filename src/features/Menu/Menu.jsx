@@ -9,9 +9,9 @@ import {
 
 const subreddits = [
     { name: 'popular', value: 'Popular' },
-    { name: 'politics', value: 'Politics' },
-    { name: 'tech', value: 'Tech' },
-    { name: 'sports', value: 'Sports' },
+    { name: 'pics', value: 'Pictures' },
+    { name: 'javascripts', value: 'Javascripts' },
+    { name: 'reactjs', value: 'reactJs' },
 ];
 
 function Menu() {
