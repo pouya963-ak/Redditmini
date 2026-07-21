@@ -9,12 +9,19 @@ export const fetchPostsBySubreddit = createAsyncThunk(
     }
 )
 
+export const fetchSearchResults = createAsyncThunk(
+    'reddit/searchPosts',
+    async (searchTerm) => {
+        const response = await searchPosts(searchTerm);
+        return response;
+    }
+)
 
 const redditSlice = createSlice({
     name: 'reddit',
     initialState: {
         posts: [],
-        isLoaded: false,
+        isLoading: false,
         hasError: false,
         errorMessage: '',
         selectedSubreddit: 'popular',
@@ -27,19 +34,34 @@ const redditSlice = createSlice({
     extraReducers: (builder) => {
       builder
         .addCase(fetchPostsBySubreddit.pending, (state) => {
-          state.isloading = true;
+          state.isLoading = true;
           state.hasError = false;
-          state.ErrorMessage = '';
+          state.errorMessage = '';
         })
         .addCase(fetchPostsBySubreddit.fulfilled, (state, action) => {
-            state.isloading = false;
+            state.isLoading = false;
             state.posts = action.payload;
         })
         .addCase(fetchPostsBySubreddit.rejected, (state, action) => {
-            state.isloading = false;
+            state.isLoading = false;
             state.hasError = true;
             state.errorMessage = action.error.message;
-        });
+        })
+        .addCase(fetchSearchResults.pending, (state) => {
+            state.isLoading = true;
+            state.hasError = false;
+            state.errorMessage = '';
+        })
+        .addCase(fetchSearchResults.fulfilled, (state, action) => {
+            state.isLoading = false;
+            state.hasError = false;
+            state.posts = action.payload;
+        })
+        .addCase(fetchSearchResults.rejected, (state, action) => {
+            state.isLoading = false;
+            state.hasError = true;
+            state.errorMessage = action.error.message;
+        })
     },
 });
 
